@@ -1,0 +1,93 @@
+* {
+  font-family: sans-serif;
+  color: darkblue;
+  background-color: antiquewhite;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-loop {
+  width: 30px;
+  height: 30px;
+}
+
+/*cursos options:
+https://developer.mozilla.org/en-US/docs/Web/CSS/cursor*/
+.add-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 2rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+.add-button-img {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 2rem;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  border-radius: 2rem;
+  background-color: white;
+  padding: 0.5rem;
+  cursor: text;
+}
+
+.list-of-tasks {
+  list-style: none;
+}
+
+.tasks {
+  margin: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: white;
+  color: darkblue;
+  font-size: 14pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+.tasks li {
+  flex: 1;
+}
+
+.conpleted {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+select {
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+select {
+  width: 10rem;
+  height: 3rem;
+  cursor: pointer;
+  padding: 1rem;
+}
