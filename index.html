@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Yoana's to do list</h1>
+    <h1 class="title">Yoana's to do list</h1>
     <div class="container">
       <div class="search-bar">
-        <img src="images/search-loop.png" alt="loop" class="search-loop" />
-        <input type="text" placeholder="Add new task" />
-        <button class="add-button" type="submit">
+        <img src="images/task-icon.png" alt="task-icon" class="task-icon" />
+        <input type="text" id="input" placeholder="Add new task" />
+        <button class="add-button" id="add-button" type="submit">
           <img class="add-button-img" src="images/add-button.png" alt="" />
         </button>
         <div class="list-options">
-          <select name="list-options" class="list-options">
+          <select name="list-options" class="list-options" id="list-options">
             <option value="all">All tasks</option>
             <option value="completed">Completed tasks</option>
             <option value="incomplete">Incomplete tasks</option>
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="list-of-tasks">
-        <ul class="tasks"></ul>
+        <ul class="tasks" id="tasks"></ul>
       </div>
     </div>
 
