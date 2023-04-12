@@ -1,20 +1,50 @@
 * {
   font-family: sans-serif;
   color: darkblue;
+  font-size: 12pt;
+}
+
+.notebook {
   background-color: antiquewhite;
+  width: 40vw;
+  height: 80vh;
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+}
+
+.holes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.holeobject {
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 2rem;
 }
 
 .title {
   display: flex;
   justify-content: center;
+  font-size: 24pt;
 }
 
 .search-bar {
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 0.7rem;
+  margin-top: 2rem;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 }
 
 .task-icon {
@@ -25,12 +55,17 @@
 /*cursos options:
 https://developer.mozilla.org/en-US/docs/Web/CSS/cursor*/
 .add-button {
-  width: 30px;
-  height: 30px;
+  width: 2rem;
+  height: 2rem;
   border: none;
   border-radius: 2rem;
   background-color: white;
   cursor: pointer;
+  background-color: white;
+  color: darkblue;
+  border: none;
+  border-bottom: solid;
+  border-width: 0.05cm;
 }
 
 .add-button-img {
@@ -48,6 +83,7 @@ input {
   border-radius: 2rem;
   background-color: white;
   padding: 0.5rem;
+  width: 20vw;
   cursor: text;
 }
 
@@ -56,63 +92,36 @@ input {
   justify-content: center;
 }
 
-/*.tasks {
-  margin: 0.5rem;
-  padding-left: 0.5rem;
-  width: 25rem;
-  background-color: white;
-  color: darkblue;
-  font-size: 14pt;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: left;
-  padding-left: 1rem;
-  border-radius: 2rem;
-}*/
-
-select {
-  appearance: none;
-  outline: none;
-  border: none;
-}
-
-.list-options {
-  margin: 0.5rem;
-  position: relative;
-  overflow: hidden;
-  border-radius: 2rem;
-}
-
-select {
-  background-color: white;
-  width: 10rem;
-  height: 3rem;
-  cursor: pointer;
-  padding: 1rem;
-}
-
 .task-style {
   margin: 0.5rem;
   padding-left: 0.5rem;
-  width: 25rem;
+  width: 18vw;
   height: 2rem;
   background-color: white;
   color: darkblue;
-  font-size: 14pt;
+  border-bottom: solid;
+  border-width: 0.05cm;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: left;
   padding-left: 1rem;
   border-radius: 2rem;
+  opacity: 0.9;
 }
 
 .complete-button,
 .delete-button {
+  margin-top: 0.5rem;
   width: 2rem;
   height: 2rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
+  background-color: white;
+  color: darkblue;
+  border: none;
+  border-bottom: solid;
+  border-width: 0.05cm;
+  opacity: 0.9;
 }
 
 .todo {
@@ -120,20 +129,13 @@ select {
   flex-direction: row;
 }
 
-.task-style-completed {
-  background-color: white;
-  text-decoration: line-through;
-  opacity: 0.5;
-}
-
 .tasks-complete {
   margin: 0.5rem;
   padding-left: 0.5rem;
-  width: 25rem;
+  width: 18vw;
   height: 2rem;
   background-color: white;
   color: darkblue;
-  font-size: 14pt;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
