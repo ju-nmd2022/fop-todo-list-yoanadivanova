@@ -1,17 +1,7 @@
-function loadHandler() {
-  todoInput = document.getElementById("input");
-  addTodo = document.getElementById("add-button");
-  taskList = document.getElementById("tasks");
-  clearButton = document.getElementById("clear");
-
-  addTodo.addEventListener("click", addTask);
-  document.addEventListener("keypress", (event) => {
-    if (event.key === "Enter") {
-      addTask();
-    }
-  });
-  document.addEventListener("DOMContentLoaded", getLocalTasks);
-}
+const todoInput = document.getElementById("input");
+const addTodo = document.getElementById("add-button");
+const taskList = document.getElementById("tasks");
+clearButton = document.getElementById("clear");
 
 function addTask() {
   const todo = document.createElement("div");
@@ -39,6 +29,13 @@ function addTask() {
   taskList.appendChild(todo);
   todoInput.value = "";
 }
+
+addTodo.addEventListener("click", addTask);
+document.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    addTask();
+  }
+});
 
 function saveLocalTasks(todo) {
   let todos;
@@ -116,6 +113,8 @@ function getLocalTasks() {
   });
 }
 
+document.addEventListener("DOMContentLoaded", getLocalTasks);
+
 function removeLocalTask(todo) {
   let todos;
   if (localStorage.getItem("todos") === null) {
@@ -128,5 +127,3 @@ function removeLocalTask(todo) {
   todos.splice(todos.indexOf(todoIndex), 1);
   localStorage.setItem("todos", JSON.stringify(todos));
 }
-
-window.addEventListener("load", loadHandler);
